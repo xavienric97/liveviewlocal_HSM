@@ -1,0 +1,21 @@
+[Unit]
+Description=Schedule Livefeed Execution
+
+[Timer]
+OnCalendar=*-*-* 18:01:00
+OnCalendar=*-*-* 19:01:00
+OnCalendar=*-*-* 20:01:00
+OnCalendar=*-*-* 21:01:00
+OnCalendar=*-*-* 22:01:00
+OnCalendar=*-*-* 23:01:00
+OnCalendar=*-*-* 00:01:00
+OnCalendar=*-*-* 01:01:00
+OnCalendar=*-*-* 02:01:00
+OnCalendar=*-*-* 03:01:00
+OnCalendar=*-*-* 04:01:00
+OnCalendar=*-*-* 05:01:00
+OnCalendar=*-*-* 06:01:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target
