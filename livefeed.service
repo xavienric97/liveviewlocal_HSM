@@ -1,0 +1,9 @@
+[Unit]
+Description=Run Livefeed Script
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/home/rigsa-ubuntu22/livefeed.sh
+User=rigsa-ubuntu22
+Environment=DISPLAY=:0
