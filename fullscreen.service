@@ -1,0 +1,13 @@
+[Unit]
+Description=Fullscreen Script
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/home/rigsa-ubuntu22/fullscreen.sh
+Restart=always
+User=rigsa-ubuntu22
+Environment=DISPLAY=:0
+
+[Install]
+WantedBy=multi-user.target
