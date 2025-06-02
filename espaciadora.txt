@@ -1,0 +1,19 @@
+find /home/rigsa-ubuntu22/Videos/Screencasts -type f -name "*.webm" -mmin +2 -print
+
+* * * * * find /home/rigsa-ubuntu22/Videos/Screencasts -type f -name "*.webm" -mmin +2 -delete
+
+
+
+
+0 6 * * * find /path/to/your/directory -type f \( -iname "*.mp4" -o -iname "*.avi" -o -iname "*.mov" \) -mtime +7 -delete
+
+------------------------------------------------------------------------------------------------------------------------------
+For real:
+
+
+0 6 * * * find /home/rigsa-ubuntu22/Videos/Screencasts -type f -name "*.mp4" -mtime +7 -delete
+
+
+0 6 * * * #runs command everyday at 6am
+-mtime +7 #everyfile that is at least 7 days old
+-----------------------------------------------------------------------------------------------------------------------------------------
