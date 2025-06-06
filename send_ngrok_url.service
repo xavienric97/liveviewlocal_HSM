@@ -1,0 +1,9 @@
+[Unit]
+Description=Run Ngrok Url Send Script
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/home/rigsa-ubuntu22/send_ngrok_url.sh
+User=rigsa-ubuntu22
+Environment=DISPLAY=:0
