@@ -6,6 +6,7 @@ MAILGUN_DOMAIN=""
 TO_EMAIL=""  # Change this to your real email address
 FROM_EMAIL="stream@$MAILGUN_DOMAIN"
 PORT=8080
+TIME_STAMP=$(date +"%Hh - %d-%m-%Y")
 WAIT_TIME=1320  # 22 minutes = 22 * 60 seconds
 
 # --- Loop ---
@@ -22,8 +23,8 @@ curl -s --user "api:$MAILGUN_API_KEY" \
 "https://api.mailgun.net/v3/$MAILGUN_DOMAIN/messages" \
 -F from="$FROM_EMAIL" \
 -F to="$TO_EMAIL" \
--F subject="🎥 Your new ngrok streaming link" \
--F text="Your new stream link is: $URL"
+-F subject="Nuevo Link para streaming del dron $TIME_STAMP" \
+-F text="El nuevo link es: $URL"
 
 echo "Email sent. Waiting $((WAIT_TIME/60)) minutes..."
 
